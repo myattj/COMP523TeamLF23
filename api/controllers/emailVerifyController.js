@@ -18,27 +18,25 @@ exports.randString = () => {
 
 
 exports.sendEmail = (email, uniqueString) => {
-  let Transport = nodemailer.createTransport({
-    // service:"Gmail",
-    // auth:{
-    //     user: username,
-    //     pass: password
-    // }
-    host: "smtp.titan.email",
-    port: 465,
-    secure: true,
-    auth: {
-      user: username,
-      pass: password,
-    },
-  });
+    
+    console.log(process.env.EMAIL_PASSWORD);
+    console.log(process.env.EMAIL_USERNAME);
+    let Transport = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+          user: username, // your Gmail address
+          pass: password, // your App Password
+        },
+      });
 //   var mailOptions;
 //   let sender = "LearnerYou_Email_Verification";
   let mailOptions = {
     from: '"The Beast" <hello@thebeast.com>',
     to: email,
     subject: "Verify your email address",
-    html: `Press <a href=http://localhost:4200/verify/${uniqueString}> here </a> to verify your email. Thanks`,
+    html: `Press <a href=http://localhost:3000/verify/${uniqueString}> here </a> to verify your email. Thanks`,
   };
 
 

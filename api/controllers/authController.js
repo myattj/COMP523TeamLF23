@@ -9,11 +9,12 @@ var bcrypt = require("bcryptjs");
 exports.signup = (req, res) => {
     const user = new User({
         username: req.body.username,
-        user_email: req.body = email,
+        user_email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 8),
         verified: false,
         user_fname: "",
-        user_lname: ""
+        user_lname: "",
+        uniqueString: verify.randString()
     })
     user.save((err, user) => {
         if(err){

@@ -67,9 +67,10 @@ initial();
 
 /* Connecting to routers */
 app.use('/', routes);
-require("./routes/getUserInfoRoutes")(app);
+//require("./routes/getUserInfoRoutes")(app);
 require("./routes/userRoutes")(app);
 require("./routes/verifyEmailRoutes")(app);
+require("./routes/authRoutes")(app);
 
 const getUserInfo = require("./routes/getUserInfoRoutes");
 app.use("/userInfo", getUserInfo);

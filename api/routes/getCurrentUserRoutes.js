@@ -3,12 +3,12 @@ const router = express.Router();
 const User = require("../models/userSchema");
 const { authJwt } = require("../middlewares/authJwt");
 const jwt = require("jsonwebtoken");
-const config = require("../config/auth.config");
+const config = require("../auth.config");
 
 
 router.get("/", (req, res) => {
   // console.log(req.headers.authorization)
-  const usertoken = "Bearer " + req.headers.authorization;
+  const usertoken = req.headers.authorization;
   const token = usertoken.split(" ");
   //   console.log(token);
   const decoded = jwt.verify(token[1], config.secret);
