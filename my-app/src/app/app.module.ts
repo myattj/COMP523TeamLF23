@@ -30,6 +30,9 @@ import { VrComponent } from './components/person/person-list/vr/vr.component';
 import { ClinicalComponent } from './components/person/person-list/clinical/clinical.component';
 import { EmploymentComponent } from './components/person/person-list/employment/employment.component';
 import { EducationComponent } from './components/person/person-list/education/education.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+
+
 
 @NgModule({
   declarations: [
@@ -49,7 +52,8 @@ import { EducationComponent } from './components/person/person-list/education/ed
     VrComponent,
     ClinicalComponent,
     EmploymentComponent,
-    EducationComponent
+    EducationComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

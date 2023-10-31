@@ -16,9 +16,11 @@ import { VrComponent } from './components/person/person-list/vr/vr.component';
 import { AddPersonComponent } from './components/person/add-person/add-person.component';
 import { StaffingListComponent } from './components/staffing/staffing-list/staffing-list.component';
 import { AddStaffingComponent } from './components/staffing/add-staffing/add-staffing.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 const routes: Routes = [
-  { path: '', component: HomepageComponent },
+  { path: '', component: LoginPageComponent },
+  { path: 'home', component: HomepageComponent },
   { path: 'closed', component: ClosedListComponent },
   { path: 'addClosed', component: AddClosedComponent },
   { path: 'jobDev', component: JobDevListComponent },
