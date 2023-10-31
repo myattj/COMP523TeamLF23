@@ -16,5 +16,6 @@ db.closed = require("../api/models/closedSchema")(mongoose);
 db.staffing = require("../api/models/staffingSchema")(mongoose);
 db.jobDev = require("../api/models/jobDevSchema")(mongoose);
 db.IPSLog = require("../api/models/IPSLogSchema")(mongoose);
-
+db.user = require("../api/models/userSchema")(mongoose);
+db.roles = require("../api/models/roleSchema")(mongoose);
 module.exports = db;
