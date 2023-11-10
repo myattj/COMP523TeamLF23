@@ -31,6 +31,7 @@ import { ClinicalComponent } from './components/person/person-list/clinical/clin
 import { EmploymentComponent } from './components/person/person-list/employment/employment.component';
 import { EducationComponent } from './components/person/person-list/education/education.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.component';
 
 
 
@@ -53,7 +54,8 @@ import { LoginPageComponent } from './components/login-page/login-page.component
     ClinicalComponent,
     EmploymentComponent,
     EducationComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    SignUpPageComponent
   ],
   imports: [
     BrowserModule,

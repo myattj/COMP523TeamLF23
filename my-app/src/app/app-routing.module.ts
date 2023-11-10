@@ -17,10 +17,12 @@ import { AddPersonComponent } from './components/person/add-person/add-person.co
 import { StaffingListComponent } from './components/staffing/staffing-list/staffing-list.component';
 import { AddStaffingComponent } from './components/staffing/add-staffing/add-staffing.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.component';
 
 const routes: Routes = [
   { path: '', component: LoginPageComponent },
   { path: 'home', component: HomepageComponent },
+  { path: 'signup', component: SignUpPageComponent },
   { path: 'closed', component: ClosedListComponent },
   { path: 'addClosed', component: AddClosedComponent },
   { path: 'jobDev', component: JobDevListComponent },

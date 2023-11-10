@@ -19,7 +19,9 @@ export class LoginPageComponent {
       console.log(this.email);
       console.log(this.password);
       this.submitted = true;
+      //Check if email is in the database, else throw error
 
+      //If email is in the database, check if password is in the database, else throw error.
       if(this.email && this.password) {
         this.router.navigate(['./home']);
       }
