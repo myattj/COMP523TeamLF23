@@ -27,6 +27,14 @@
                     A valid password is required!
                 </div>
             </div>
+
+            <div class="field">
+                <h3>Confirm Password:</h3>
+                <input type="password" [(ngModel)]="password2" name="password2">
+                <div *ngIf="this.match == false" class="error">
+                    Passwords do not match!
+                </div>
+            </div>
             
             <div class="field">
                 <button type="submit">Sign Up</button>

@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
 export class SignUpPageComponent {
   email = '';
   password = '';
+  password2 = '';
   submitted = false;
+  match = true
   constructor(private router: Router){
     
   }
@@ -19,8 +21,10 @@ export class SignUpPageComponent {
       this.submitted = true;
       //Add confirm password validation
       //Add email and password to the database
-      
-      if(this.email && this.password) {
+      if(this.password != this.password2) {
+        this.match = false;
+      }
+      if(this.match == true && this.email && this.password) {
         this.router.navigate(['./']);
       }
       
