@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SignUpPageComponent } from './sign-up-page.component';
 
 describe('SignUpPageComponent', () => {
