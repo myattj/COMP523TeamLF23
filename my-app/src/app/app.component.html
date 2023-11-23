@@ -1,14 +1,5 @@
-<style>
-    body {
-        font-family: Verdana, Geneva, Tahoma, sans-serif, serif;
-    }
 
-    .top-box h1 {
-        margin: 0;
-    }
-</style>
-
-<body style="background-color:rgb(193, 235, 221);">
+<div class = "app-container" style = "height:100%">
     <nav class="navbar navbar-expand navbar-dark bg-dark">
         <div class="navbar-nav">
             <a class="nav-item nav-link" routerLink="/"><button mat-raised-button color="primary"><img
@@ -26,16 +17,11 @@
                     style="margin-left:50px;">Job Development Log</button></a>
         </div>
     </nav>
-</body>
 
 
-<!-- main content container -->
-<div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 offset-sm-2">
-                <router-outlet></router-outlet>
-            </div>
-        </div>
-    </div>
+    <!-- Main Content Container -->
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+
 </div>
