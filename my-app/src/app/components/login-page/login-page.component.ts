@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
+interface LoginResponse {
+  accessToken: string;
+}
+
 
 @Component({
   selector: 'app-login-page',
@@ -11,18 +17,27 @@ export class LoginPageComponent {
   email = '';
   password = '';
   submitted = false;
-  constructor(private router: Router){
-    
-  }
 
-  public onSubmit(){
-      console.log(this.email);
-      console.log(this.password);
-      this.submitted = true;
+  constructor(private router: Router, private http: HttpClient) { }
 
-      if(this.email && this.password) {
+  public onSubmit() {
+    this.submitted = true;
+
+    if (this.email && this.password) {
+      this.http.post<LoginResponse>('http://localhost:3000/api/auth/signin', {
+        email: this.email,
+        password: this.password
+      }).subscribe(response => {
+        console.log(response);
+        localStorage.setItem('accessToken', response.accessToken);
+        const value = localStorage.getItem('accessToken');
+        console.log(value); // Should log 'testValue' if successful
+     
         this.router.navigate(['./home']);
-      }
-      
+      }, error => {
+        alert("Invalid email or password. Try again.");
+        console.error(error);
+      });
+    }
   }
 }
