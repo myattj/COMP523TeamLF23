@@ -39,6 +39,10 @@ Resources used for the backend:
 > [RESTful API structure](https://www.coreycleary.me/project-structure-for-an-express-rest-api-when-there-is-no-standard-way)  
 > [Express Routing](https://expressjs.com/en/guide/routing.html#express-router)
 
+Note: Please include a .env file in the root folder containing your gmail address and app password in the following format:
+EMAIL_PASSWORD=#####
+EMAIL_USERNAME=#####
+
 ## Starting the application
 
 In it's current state, the application is not running on a server so it must be run on `localhost`.

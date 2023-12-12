@@ -35,7 +35,7 @@ export class LoginPageComponent {
      
         this.router.navigate(['./home']);
       }, error => {
-        alert("Invalid email or password. Try again.");
+        alert(error.error.message);
         console.error(error);
       });
     }

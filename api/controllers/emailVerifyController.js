@@ -18,7 +18,7 @@ exports.randString = () => {
 
 
 exports.sendEmail = (email, uniqueString) => {
-    
+    console.log(email);
     console.log(process.env.EMAIL_PASSWORD);
     console.log(process.env.EMAIL_USERNAME);
     let Transport = nodemailer.createTransport({
@@ -33,7 +33,7 @@ exports.sendEmail = (email, uniqueString) => {
 //   var mailOptions;
 //   let sender = "LearnerYou_Email_Verification";
   let mailOptions = {
-    from: '"The Beast" <hello@thebeast.com>',
+    from: '"UNC Department of Psychiatry" <hello@psychiatry.unc.edu>',
     to: email,
     subject: "Verify your email address",
     html: `Press <a href=http://localhost:3000/verify/${uniqueString}> here </a> to verify your email. Thanks`,

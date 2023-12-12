@@ -7,6 +7,7 @@ const closedController = require("../controllers/closedController");
 const staffingController = require("../controllers/staffingController");
 const jobDevController = require("../controllers/jobDevController");
 const IPSLogController = require("../controllers/IPSLogController");
+const allLogsController = require("../controllers/allRecordsController");
 
 /* Home Page */
 router.get('/', (req, res) => {
@@ -57,5 +58,7 @@ router.post('/ipslog', IPSLogController.addRecord);
 router.patch('/ipslog/:id', IPSLogController.updateRecord);
 router.delete('/ipslog/:id', IPSLogController.deleteRecord);
 router.delete('/ipslog', IPSLogController.deleteAllRecords);
+
+router.get('/alllog', allLogsController.getAllRecordsFromAllServices);
 
 module.exports = router;
